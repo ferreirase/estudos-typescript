@@ -4,7 +4,7 @@
 // Mas ele compila pra JS mesmo com erros.
 
 // string
-let nome: string = 'João'
+let nome: string = 'Anderson'
 // erro => nome = 12
 console.log(nome)
 
@@ -32,3 +32,37 @@ console.log(hobbies)
 let endereco: [string, number] // o primeiro elemento tem que ser ser string e o segundo number
 endereco = ['Av. Principal', 123]
 console.log(endereco)
+endereco = ['Av. Nova', 321]
+console.log(endereco)
+
+// enums: lista de valores pré definidos
+enum Colors {
+	Cinza, //0
+	Verde, //1
+	Azul = 11, // podemos setar manualmente os valores tmbm
+}
+
+let minhaCor: Colors = Colors.Verde
+console.log(minhaCor) // vai imprimir 1, que é a posição do verde
+
+//any: recebe tipo de qualquer coisa
+let carro: any = 'BMW'
+console.log(carro)
+carro = {
+	ano: 2020,
+	marca: 'Chevrolet',
+}
+console.log(carro)
+
+// funções e retornos
+function retornaMeuNome(): string {
+	// função que retorna uma string
+	return nome
+}
+console.log(retornaMeuNome())
+
+// função que não retorna nada
+function digaOi(): void {
+	console.log('oi')
+}
+digaOi()
